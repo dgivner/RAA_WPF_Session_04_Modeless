@@ -1,0 +1,92 @@
+﻿<Window x:Class="RAA_WPF_Session_04_Modeless.MyForm"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RAA_WPF_Session_04_Modeless"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="450">
+    <Border Margin="10">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.ColumnSpan="2" Content="Level Checker" FontSize="48" FontFamily="Arial Black"></Label>
+            <Label Grid.Row="1" Grid.ColumnSpan="2" Content="Select Level to Check:" ></Label>
+            <ComboBox Grid.Row="2" Grid.ColumnSpan="2" SelectionChanged="ComboBox_SelectionChanged" x:Name="cmbLevels" ItemsSource="{Binding LevelList}" SelectedItem="SelectedLevel" DisplayMemberPath="Name" SelectedValuePath="Id"/>
+            <Label Grid.Row="3" Grid.ColumnSpan="2" Content="Select Color:"></Label>
+            <Label Grid.Row="6" Grid.ColumnSpan="2" Content="Select Category to Check:"></Label>
+            <Grid Grid.Row="4" ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <RadioButton x:Name="RedRadioButton" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="8,0,0,0"></RadioButton>
+                <Label Grid.Column="1" Content="Red"></Label>
+                <RadioButton x:Name="GreenRadioButton" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Label Grid.Column="3" Content="Green"/>
+                <RadioButton x:Name="BlueRadioButton" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Label Grid.Column="5" Content="Blue"/>
+                <RadioButton x:Name="YellowRadioButton" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Label Grid.Column="7" Content="Yellow"/>
+            </Grid>
+            <Grid Grid.Row="7">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <CheckBox x:Name="LightFixturesCheckBox" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"></CheckBox>
+                <Label Grid.Column="1" Content="Lighting"></Label>
+            </Grid>
+
+            <Grid Grid.Row="8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <CheckBox x:Name="CommunicationDevicesCheckBox" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"></CheckBox>
+                <Label Grid.Column="1" Content="Communication Devices"></Label>
+            </Grid>
+
+            <Grid Grid.Row="9">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <CheckBox x:Name="MechanicalEquipmentCheckBox" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" ></CheckBox>
+                <Label Grid.Column="1" Content="Mechanical Equipment"></Label>
+            </Grid>
+
+            <Grid Grid.Row="11" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Width="80" Height="25" Content="Reset" x:Name="btnReset" Click="btnReset_Click"/>
+                <Button Grid.Column="1" Width="80" Height="25" Content="Apply" x:Name="btnApply" Click="btnApply_Click"/>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Command">
+    <Text>Command RAA_WPF_Session_04_Modeless</Text>
+    <Description>Some description for RAA_WPF_Session_04_Modeless</Description>
+    <Assembly>RAA_WPF_Session_04_Modeless.dll</Assembly>
+    <FullClassName>RAA_WPF_Session_04_Modeless.Command</FullClassName>
+    <ClientId>b7b86e16-309e-4707-8ad7-fafad1e80210</ClientId>
+    <VendorId>com.YOUR COMPANY NAME</VendorId>
+    <VendorDescription>YOUR COMPANY NAME, YOUR COMPANY URL</VendorDescription>
+  </AddIn>
+  <AddIn Type="Application">
+    <Name>Application RAA_WPF_Session_04_Modeless</Name>
+    <Assembly>RAA_WPF_Session_04_Modeless.dll</Assembly>
+    <FullClassName>RAA_WPF_Session_04_Modeless.App</FullClassName>
+    <ClientId>d1df0ba9-7a14-41a7-89e7-17d37edf0a81</ClientId>
+    <VendorId>com.YOUR COMPANY NAME</VendorId>
+    <VendorDescription>YOUR COMPANY NAME, YOUR COMPANY URL</VendorDescription>
+  </AddIn>
+</RevitAddIns>
