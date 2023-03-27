@@ -1,5 +1,6 @@
 ﻿using Autodesk.Revit.DB;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Windows;
@@ -22,13 +23,17 @@ namespace RAA_WPF_Session_04_Modeless
     {
         
         private readonly Autodesk.Revit.DB.Document doc;
+
+        private ObservableCollection<Level> LevelList { get; set; }
         //private ExternalEvent myEvent;
         public MyForm(Autodesk.Revit.DB.Document doc, List<Level> levelList)
         {
             InitializeComponent();
             this.doc = doc;
+
             //myEvent = _event;
             // Check if levelList is null or not
+            LevelList = new ObservableCollection<Level>(levelList);
             if (levelList == null)
             {
                 MessageBox.Show("levelList is null!");

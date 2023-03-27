@@ -30,5 +30,13 @@ namespace RAA_WPF_Session_04_Modeless
 
             return null;
         }
+
+        internal static List<Level> GetAllLevels(Document doc)
+        {
+            FilteredElementCollector collector = new FilteredElementCollector(doc);
+            collector.OfClass(typeof(Level));
+
+            return collector.Cast<Level>().ToList();
+        }
     }
 }

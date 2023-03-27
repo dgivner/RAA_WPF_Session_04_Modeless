@@ -29,7 +29,7 @@
             </Grid.ColumnDefinitions>
             <Label Grid.Row="0" Grid.ColumnSpan="2" Content="Level Checker" FontSize="48" FontFamily="Arial Black"></Label>
             <Label Grid.Row="1" Grid.ColumnSpan="2" Content="Select Level to Check:" ></Label>
-            <ComboBox Grid.Row="2" Grid.ColumnSpan="2" SelectionChanged="ComboBox_SelectionChanged" x:Name="cmbLevels" ItemsSource="{Binding LevelList}" SelectedItem="SelectedLevel" DisplayMemberPath="Name" SelectedValuePath="Id"/>
+            <ComboBox Grid.Row="2" Grid.ColumnSpan="2" SelectionChanged="ComboBox_SelectionChanged" x:Name="cmbLevels" ItemsSource="{Binding LevelList}" SelectedItem="SelectedLevel" DisplayMemberPath="Name"/>
             <Label Grid.Row="3" Grid.ColumnSpan="2" Content="Select Color:"></Label>
             <Label Grid.Row="6" Grid.ColumnSpan="2" Content="Select Category to Check:"></Label>
             <Grid Grid.Row="4" ColumnSpan="2">

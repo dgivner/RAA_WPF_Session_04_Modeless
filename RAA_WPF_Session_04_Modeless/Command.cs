@@ -30,6 +30,7 @@ namespace RAA_WPF_Session_04_Modeless
             Document doc = uidoc.Document;
 
             // put any code needed for the form here
+            List<Level> LevelList = Utils.GetAllLevels(doc);
 
             //create and instance of the event action
             EventAction myAction = new EventAction();
@@ -40,7 +41,7 @@ namespace RAA_WPF_Session_04_Modeless
             //pass external event to form as arguments. create variables and assign arguments to them
 
             // open form
-            MyForm currentForm = new MyForm(doc,levelList)
+            MyForm currentForm = new MyForm(doc,LevelList)
             {
                 Width = 450,
                 Height = 450,
